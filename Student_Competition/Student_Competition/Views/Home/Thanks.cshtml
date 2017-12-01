@@ -1,0 +1,51 @@
+﻿<!--
+   Name:  Suzanne Schneider
+   ID:  991391943
+   Assignment: #2
+   Prof: Syed Tanbeer
+-->
+
+@model Student_Competition.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+
+
+
+<body class="text-center">
+    <div class="panel-heading">
+        <div class="panel-heading text-center">
+            Name:  Suzanne Schneider <br />
+            ID:  991391943 <br />
+            Assignment: #2 <br />
+            Prof: Syed Tanbeer <br />
+        </div>
+    </div>
+
+
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that you're coming!
+            @: You were enrolled in the @Model.Interest track of the competition.
+ 
+        }
+        else
+        {
+            @:Sorry to hear that you can't make it, but thanks for letting us know.
+        }
+    </p>
+    Click <a class="nav-link" asp-action="ListStudents">here</a> to see who is coming
+
+
+</body>
+</html>
